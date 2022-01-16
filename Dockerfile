@@ -10,6 +10,8 @@ ENV \
 # Basic build-time metadata as defined at http://label-schema.org
 ARG BUILD_DATE
 
+LABEL io.continity.nginx-leafletjs=$BUILD_DATE
+
 # Install packages
 RUN apt-get update && \
     apt-get install --no-install-recommends -y \
