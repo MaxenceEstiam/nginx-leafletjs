@@ -18,13 +18,13 @@ RUN apt-get update && \
     wget  \
     unzip \
     && rm -rf /var/lib/apt/lists/*
-    
-# Set locales
-ENV \
-    LC_ALL=en_US.UTF-8 \
-    LANG=en_US.UTF-8 \
-    LANGUAGE=en_US.UTF-8
-    
+
+# Remove index.html
+RUN rm ${APPDIR}/index.html
+
+# add empty index.html
+RUN touch ${APPDIR}/index.html
+
 # Extract leaflet
 RUN wget -nv -O /tmp/leaflet.zip ${LEAFLET_URL} &&\
     unzip -q /tmp/leaflet.zip -d ${APPDIR} &&\
