@@ -5,7 +5,7 @@ ENV LEAFLET_VERSION="1.7.1"
 
 # Set variables
 ENV \
-    APPDIR="/usr/share/nginx/html" \
+    APPDIR="/usr/share/nginx/html"
     
 # Basic build-time metadata as defined at http://label-schema.org
 ARG BUILD_DATE
